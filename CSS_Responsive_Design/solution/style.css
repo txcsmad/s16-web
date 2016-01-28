@@ -1,0 +1,51 @@
+body {
+	font-family: sans-serif;
+}
+
+ul#catFacts li {
+	margin-bottom: 4px;
+	border: 1px solid brown;
+}
+
+li#nine {
+	border: 2px solid green;
+}
+
+h1 {    
+	font-size: 64px;
+}
+
+h2 {
+	font-size: 32px;
+}
+
+img {
+	display: block;
+	margin: 0 auto;
+}
+
+img.preview {
+	width: 100px;
+}
+
+@media (min-width: 600px) {
+	#navbar li {
+		display: inline-block;
+	}
+}
+
+@media (max-width: 800px) {    
+	h1 {        
+		font-size: 32px;    
+	}
+}
+
+@media (max-width: 600px) {
+	h1, h2 {        
+		font-size: 24px;    
+	}
+	
+	img {
+		max-width: 200px;
+	}
+}
