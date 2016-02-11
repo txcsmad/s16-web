@@ -1,0 +1,3 @@
+[submodule "node-wiki"]
+	path = node-wiki
+	url = git@github.com:utcsmad/node-wiki.git
