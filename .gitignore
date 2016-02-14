@@ -1,0 +1,5 @@
+# Powerpoint saves
+.~$*.pptx
+
+# OS X
+.DS_Store
