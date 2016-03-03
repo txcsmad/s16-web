@@ -7,7 +7,7 @@ Web workshops for spring 2016.
 1. Responsive Design (CSS)
 2. Wiki App (Node.js)
 3. Animate (CSS)
-4. Full Stack Intro
+4. Full Stack Intro (PHP)
 5. Color Clock (JavaScript)
 
 ## Instructors
