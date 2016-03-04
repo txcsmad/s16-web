@@ -1,6 +1,6 @@
-[submodule "node-wiki"]
-	path = node-wiki
-	url = git@github.com:utcsmad/node-wiki.git
-[submodule "js-color-clock"]
-	path = js-color-clock
+[submodule "5 - Color Clock (JavaScript)/js-color-clock"]
+	path = 5 - Color Clock (JavaScript)/js-color-clock
 	url = git@github.com:txcsmad/js-color-clock.git
+[submodule "2 - Wiki App (Node.js)/node-wiki"]
+	path = 2 - Wiki App (Node.js)/node-wiki
+	url = git@github.com:txcsmad/node-wiki.git
