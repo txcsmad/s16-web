@@ -2,6 +2,8 @@
 
 Animate page elements using the CSS3 `animate` property and `@keyframes`.
 
+![](http://i.imgur.com/B0sktWb.png)
+
 ## What we did 
 
 We wrote the code using jsbin.com, a live interactive in-browser HTML/CSS/JS
