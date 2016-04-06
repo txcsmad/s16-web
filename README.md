@@ -9,6 +9,7 @@ Web workshops for spring 2016.
 3. Animate (CSS)
 4. Full Stack Intro (PHP)
 5. Color Clock (JavaScript)
+6. Getting Started With Go (Go)
 
 ## Instructors
 
