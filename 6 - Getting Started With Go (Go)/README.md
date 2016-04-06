@@ -2,7 +2,7 @@
 
 ![](http://i.imgur.com/XX9CsGq.png)
 
-Go is an open-source statically typed programming knowledge. It has excellent
+Go is an open-source statically typed programming language. It has excellent
 support for:
 
 - concurrency
