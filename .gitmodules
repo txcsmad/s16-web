@@ -4,3 +4,6 @@
 [submodule "2 - Wiki App (Node.js)/node-wiki"]
 	path = 2 - Wiki App (Node.js)/node-wiki
 	url = git@github.com:txcsmad/node-wiki.git
+[submodule "8 - Will it rain today (Go)/will-it-rain"]
+	path = 8 - Will it rain today (Go)/will-it-rain
+	url = git@github.com:txcsmad/will-it-rain.git
