@@ -10,6 +10,8 @@ Web workshops for spring 2016.
 4. Full Stack Intro (PHP)
 5. Color Clock (JavaScript)
 6. Getting Started With Go (Go)
+7. 
+8. Will it rain today (Go)
 
 ## Instructors
 
