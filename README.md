@@ -12,7 +12,7 @@ Web workshops for spring 2016.
 6. Getting Started With Go (Go)
 7. 
 8. Will it rain today (Go)
-9. Web privacy and email encyrption with GPG
+9. Web privacy and email encryption with GPG
 10. Concurrency (Go)
 
 ## Instructors
