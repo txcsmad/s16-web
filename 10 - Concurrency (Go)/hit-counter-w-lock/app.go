@@ -36,9 +36,12 @@ var (
 
 func main() {
 	htmlTmpl = template.Must(template.New("index").Parse(htmlStr))
+
 	http.HandleFunc("/", rootHandler)
 	http.HandleFunc("/status", statusHandler)
 	http.HandleFunc("/reset", resetHandler)
+
+	fmt.Println("serving on localhost:8080")
 	log.Fatal(http.ListenAndServe("localhost:8080", nil))
 }
 

@@ -17,5 +17,13 @@ Web workshops for spring 2016.
 
 ## Instructors
 
-* [Brian Cui](https://github.com/analytalica)
-* [Nishanth Shanmugham](https://github.com/nishanths)
+Please feel free to get in touch with questions!
+
+Brian Cui
+
+- GitHub: [analytalica](https://github.com/analytalica)
+
+Nishanth Shanmugham
+
+- Email: [nishanths@utexas.edu](mailto:nishanths@utexas.edu)
+- GitHub: [nishanths](https://github.com/nishanths)

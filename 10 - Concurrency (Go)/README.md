@@ -5,6 +5,21 @@ library's `sync` package contains structures used to write concurrent programs.
 In addition, Go has built-in language features like channels and goroutines that
 can be used to communicate between two or more concurrent processes.
 
+## Questions?
+
+Nishanth Shanmugham
+
+- Email: [nishanths@utexas.edu](mailto:nishanths@utexas.edu)
+- GitHub: [nishanths](https://github.com/nishanths)
+
+## Today's workshop
+
+Topics
+
+- Locks (hit-counters examples)
+- goroutines, waitgroups (see goroutines examples)
+- Channels (time permitting)
+
 ## Wait, what is concurrency?
 
 Normally, programs have a single thread of execution. For example:
@@ -93,21 +108,8 @@ the spawned goroutines to finish their work before the main program exited.
 This is where the `sync` package comes in (in this program, specifically the
 WaitGroup).
 
-## Today's workshop
-
-Topics
-
-- Locks (hit-counters examples)
-- goroutines, waitgroups (see goroutines examples)
-- Channels (time permitting)
-
-## Author
-
-Nishanth Shanmugham
-
-- Email: [nishanths@utexas.edu](mailto:nishanths@utexas.edu)
-- GitHub: [nishanths](https://github.com/nishanths)
-
 ## License
+
+This directory and the subdirectories are MIT licensed.
 
 [MIT](http://nishanths.mit-license.org)

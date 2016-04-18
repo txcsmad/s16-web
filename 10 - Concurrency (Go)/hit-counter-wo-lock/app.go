@@ -5,19 +5,12 @@ import (
 	"html/template"
 	"log"
 	"net/http"
-	"sync"
 )
 
-// A simple struct with an embedded mutex
-type counter struct {
-	sync.Mutex
-	value int
-}
+type counter int
 
-func (c *counter) reset() {
-	c.Lock()
-	defer c.Unlock()
-	c.value = 0
+func (c counter) reset() {
+	c = 0
 }
 
 var (
@@ -36,26 +29,25 @@ var (
 
 func main() {
 	htmlTmpl = template.Must(template.New("index").Parse(htmlStr))
+
 	http.HandleFunc("/", rootHandler)
 	http.HandleFunc("/status", statusHandler)
 	http.HandleFunc("/reset", resetHandler)
+
+	fmt.Println("serving on localhost:8080")
 	log.Fatal(http.ListenAndServe("localhost:8080", nil))
 }
 
 func rootHandler(w http.ResponseWriter, req *http.Request) {
-	c.Lock()
-	defer c.Unlock()
-	c.value += 1
+	c += 1
 
-	htmlTmpl.Execute(w, map[string]int{
-		"count": c.value,
+	htmlTmpl.Execute(w, map[string]interface{}{
+		"count": c,
 	})
 }
 
 func statusHandler(w http.ResponseWriter, req *http.Request) {
-	c.Lock()
-	defer c.Unlock()
-	fmt.Fprintf(w, fmt.Sprintf("%d", c.value))
+	fmt.Fprintf(w, fmt.Sprintf("%d", c))
 }
 
 func resetHandler(w http.ResponseWriter, req *http.Request) {
