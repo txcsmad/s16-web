@@ -118,7 +118,6 @@ func main() {
 			log.Fatal(err)
 		}
 
-		fmt.Println(t.Name)
 		for _, p := range players {
 			fmt.Print(p)
 		}
