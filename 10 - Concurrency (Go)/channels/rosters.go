@@ -84,24 +84,24 @@ func getTeams() ([]team, error) {
 	return m.Teams, nil
 }
 
-func getRoster(slug string) ([]player, error) {
+func getRoster(slug string, ch chan []player) {
 	url := fmt.Sprintf("https://www.stattleship.com/football/nfl/rosters?team_id=%s", slug)
 	req, err := newRequest(url)
 	if err != nil {
-		return nil, err
+		ch <- nil
 	}
 
 	body, err := do(req)
 	if err != nil {
-		return nil, err
+		ch <- nil
 	}
 	defer body.Close()
 
 	var m stattleshipRosterResponse
 	if err := json.NewDecoder(body).Decode(&m); err != nil {
-		return nil, err
+		ch <- nil
 	}
-	return m.Players, nil
+	ch <- m.Players
 }
 
 func main() {
@@ -111,16 +111,28 @@ func main() {
 		log.Fatal(err)
 	}
 
+	ch := make(chan []player, len(teams))
+
 	// For each team, get roster and print
 	for _, t := range teams {
-		players, err := getRoster(t.Slug)
-		if err != nil {
-			log.Fatal(err)
+		go getRoster(t.Slug, ch)
+	}
+
+	counter := 0
+	for players := range ch {
+		counter += 1
+
+		if players == nil {
+			log.Fatal("failed to fetch players")
 		}
 
 		for _, p := range players {
 			fmt.Print(p)
 		}
 		fmt.Print("\n\n")
+
+		if counter == len(teams) {
+			close(ch)
+		}
 	}
 }
